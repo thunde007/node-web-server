@@ -29,10 +29,8 @@ app.use((req,res,next)=>{
     res.render('maintain.hbs');
 });
 */app.use(express.static(__dirname + '/public'));
+
 app.get('/',(req,res)=>{
-    res.send('<h1>Hello express!</h1>');
-});
-app.get('/home',(req,res)=>{
     res.render('home.hbs',{
         pageTitle:'home page',
         currentYear:new Date().getFullYear()
@@ -43,6 +41,12 @@ app.get('/about',(req,res) => {
     res.render('about.hbs',{
         pageTitle:'About page',
         currentYear:new Date().getFullYear()
+    });
+});
+app.get('/projects',(req,res)=>{
+
+    res.render('projects.hbs',{
+        pageTitle:'Projects'
     });
 });
 app.listen(port,()=>{
