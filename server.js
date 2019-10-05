@@ -10,7 +10,7 @@ hbs.registerPartials(__dirname+'/views/partials');
 app.set('viewengine','hbs');
 
 
-app.use((req,res,next)=>{
+app.use((req,res,next)=>{fdhfd
       
     var now=new Date().toString();
     var log=`${now}:${req.method} ${req.url}`;
